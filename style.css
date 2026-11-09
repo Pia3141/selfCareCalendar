@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+html {
+    width: 100%;
+
+}
+
+body{
+    min-height: 100vh;
+    width:100%;
+
+    background-color:rgb(2, 74, 50);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    background: url('https://cdn.pixabay.com/photo/2021/11/19/15/21/christmas-6809682_1280.png');
+
+    overflow:hidden;
+
+}
+
+
+
+#calendar {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+
+    width:100%;
+    min-height:100vh;
+
+}
+
+.door {
+    min-height:0;
+
+    border: 2px solid #ab1d00c2;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 5em;
+    font-family: "Mountains of Christmas", serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #ff0000;
+    text-shadow: 3px 3px #ab1d00c2;
+    background-color: #ffa9a924;
+
+}
+
+.text{
+    margin-bottom: 25px;
+}
+
+.my-modal{
+    color: rgb(112, 0, 19) ;
+    font-size: 1.2em;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding:10px;
+}
+
+#link-btn {
+    background-color: rgb(112, 0, 19) !important;
+}
+
+#modal-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+} 
+
+@media only screen and (max-width: 600px) {
+
+      body{
+        overflow-y: auto;
+
+    }
+    #calendar {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(8, 1fr);
+
+        gap: 10px;
+        padding: 10px;
+
+        height:auto;
+        min-height:0;
+        width:100%;
+    }
+    .door{
+        height:auto;
+        min-height: 0;
+
+        aspect-ratio: 1/1;
+
+        font-size: 2.5em;
+    }
+}
